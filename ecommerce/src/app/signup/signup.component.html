@@ -1,0 +1,25 @@
+<div class="container">
+   <h2>Registration Now :</h2>
+    <form [formGroup]="registerform" (ngSubmit)="signup(registerform)">
+
+        <label for="Uname">name:</label>
+        <input formControlName="name" type = "text" class="form-control" id="Uname">
+
+        <label for="Uemail">email:</label>
+        <input formControlName="emil" type = "email" class="form-control" id="Uemail">
+
+        <label for="Upassword">password:</label>
+        <input formControlName="password"type = "password"  class="form-control" id="Upassword">
+
+        <label for="Urepassword">repassword</label>
+        <input formControlName="repassword"type = "password"  class="form-control" id="Urepassword">
+
+        <label for="Uphone">phone:</label>
+        <input formControlName="phone"type = "number"  class="form-control" id="Uphone">
+
+          <button [disabled]="registerform.invalid" class="btn btn-success mt-2"> Register</button>
+
+    </form>
+
+
+</div>
